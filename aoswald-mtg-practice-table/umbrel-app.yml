@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: aoswald-mtg-practice-table
+name: MTG Practice Table
+tagline: Practice Commander and run a shared MTG life table
+icon: https://raw.githubusercontent.com/a0swald/mtg-practice-table/main/public/icon.png
+category: Games
+version: "0.1.0"
+port: 3100
+description: >-
+  A self-hosted Magic: The Gathering practice and table utility app. Practice Commander games, use a mobile-first life counter, and create live Shared Tables that synchronize player life and state across devices in real time.
+
+developer: Alex Oswald
+website: https://mtgtable.duckdns.org
+submitter: Alex Oswald
+submission: https://github.com/a0swald/umbrel-community-app-store
+repo: https://github.com/a0swald/mtg-practice-table
+support: https://github.com/a0swald/mtg-practice-table/issues
+releaseNotes: >-
+  Initial Umbrel release of MTG Practice Table with Commander practice, Table Utility, and real-time Shared Table support.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
