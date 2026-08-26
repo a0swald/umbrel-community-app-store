@@ -4,7 +4,7 @@ name: MTG Practice Table
 tagline: Practice Commander and run a shared MTG life table
 icon: https://raw.githubusercontent.com/a0swald/mtg-practice-table/main/public/icon.png
 category: Games
-version: "0.2.0"
+version: "0.3.0"
 port: 3100
 description: >-
   A self-hosted Magic: The Gathering practice and table utility app. Practice Commander games, use a mobile-first life counter, and create live Shared Tables that synchronize player life and state across devices in real time.
@@ -16,7 +16,7 @@ submission: https://github.com/a0swald/umbrel-community-app-store
 repo: https://github.com/a0swald/mtg-practice-table
 support: https://github.com/a0swald/mtg-practice-table/issues
 releaseNotes: >-
-  Adds self-service Remote Access settings with DuckDNS configuration, automatic DNS updates, persistent server-side configuration, and public HTTPS and Socket.IO connectivity checks.
+  Adds private public-access PIN protection for DuckDNS-hosted tables without requiring Umbrel accounts, protects host-only Remote Access settings from public guests, secures Shared Table Socket.IO access, and reorganizes the main menu into Practice, Live Gameplay Companion, and Settings.
 dependencies: []
 path: ""
 defaultUsername: ""
