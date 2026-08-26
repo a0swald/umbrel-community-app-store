@@ -18,5 +18,34 @@ services:
       HOSTNAME: 0.0.0.0
       PORT: 3100
       MTG_DATA_DIR: /app/data
+      CADDY_ADMIN_URL: http://caddy:2019
     volumes:
       - ${APP_DATA_DIR}/data:/app/data
+    depends_on:
+      - caddy
+
+  caddy:
+    image: caddy:2.10-alpine
+    restart: on-failure
+    init: true
+    ports:
+      # Umbrel itself commonly owns host 80/443, so expose alternate LAN ports.
+      # Router forwards WAN 80 -> Umbrel 8080 and WAN 443 -> Umbrel 8443.
+      - "8080:80"
+      - "8443:443"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cat >/etc/caddy/Caddyfile <<'EOF'
+        {
+          admin 0.0.0.0:2019
+        }
+        :80 {
+          respond "MTG Practice Table remote access is waiting for configuration." 200
+        }
+        EOF
+        exec caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
+    volumes:
+      - ${APP_DATA_DIR}/caddy-data:/data
+      - ${APP_DATA_DIR}/caddy-config:/config
