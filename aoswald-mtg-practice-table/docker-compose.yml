@@ -14,3 +14,6 @@ services:
       NODE_ENV: production
       HOSTNAME: 0.0.0.0
       PORT: 3100
+      MTG_DATA_DIR: /app/data
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
