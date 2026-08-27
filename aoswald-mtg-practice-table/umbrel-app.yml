@@ -4,7 +4,7 @@ name: MTG Practice Table
 tagline: Practice Commander and run a shared MTG life table
 icon: https://raw.githubusercontent.com/a0swald/mtg-practice-table/main/public/icon.png
 category: Games
-version: "0.3.3"
+version: "0.3.4"
 port: 3100
 description: >-
   A self-hosted Magic: The Gathering practice and table utility app. Practice Commander games, use a mobile-first life counter, and create live Shared Tables that synchronize player life and state across devices in real time.
@@ -15,7 +15,7 @@ submission: https://github.com/a0swald/umbrel-community-app-store
 repo: https://github.com/a0swald/mtg-practice-table
 support: https://github.com/a0swald/mtg-practice-table/issues
 releaseNotes: >-
-  Restores the known-good single-container Umbrel package so MTG Practice Table installs and launches reliably again. Remote-access ingress is temporarily removed from the Umbrel compose while it is moved to a safer implementation that cannot prevent the core app from installing.
+  Rebuilds remote access as part of the main MTG container instead of a required Caddy sidecar. The app always boots normally through Umbrel, while bundled Caddy provides optional HTTPS ingress on host ports 18080 and 18443, restores saved DuckDNS configuration after restarts, and proxies Socket.IO. If Caddy cannot start, local MTG access remains available.
 dependencies: []
 path: ""
 defaultUsername: ""
