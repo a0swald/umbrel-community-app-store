@@ -5,8 +5,6 @@ services:
     environment:
       APP_HOST: aoswald-mtg-practice-table_web_1
       APP_PORT: 3100
-      # MTG Practice Table is intentionally a guest-facing table app.
-      # Do not put Umbrel account authentication in front of it.
       PROXY_AUTH_ADD: "false"
 
   web:
@@ -29,23 +27,12 @@ services:
     restart: on-failure
     init: true
     ports:
-      # Umbrel itself commonly owns host 80/443, so expose alternate LAN ports.
-      # Router forwards WAN 80 -> Umbrel 8080 and WAN 443 -> Umbrel 8443.
-      - "8080:80"
-      - "8443:443"
-    command:
-      - /bin/sh
-      - -c
-      - |
-        cat >/etc/caddy/Caddyfile <<'EOF'
-        {
-          admin 0.0.0.0:2019
-        }
-        :80 {
-          respond "MTG Practice Table remote access is waiting for configuration." 200
-        }
-        EOF
-        exec caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
+      # Deliberately high host ports to avoid collisions with Umbrel and other apps.
+      # Router forwards WAN 80 -> Umbrel 18080 and WAN 443 -> Umbrel 18443.
+      - "18080:80"
+      - "18443:443"
+    command: >-
+      /bin/sh -c 'printf "%s\n" "{" "  admin 0.0.0.0:2019" "}" ":80 {" "  respond \"MTG Practice Table remote access is waiting for configuration.\" 200" "}" > /etc/caddy/Caddyfile && exec caddy run --config /etc/caddy/Caddyfile --adapter caddyfile'
     volumes:
       - ${APP_DATA_DIR}/caddy-data:/data
       - ${APP_DATA_DIR}/caddy-config:/config
