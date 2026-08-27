@@ -16,5 +16,10 @@ services:
       HOSTNAME: 0.0.0.0
       PORT: 3100
       MTG_DATA_DIR: /app/data
+      CADDY_ADMIN_URL: http://127.0.0.1:2019
     volumes:
       - ${APP_DATA_DIR}/data:/app/data
+    ports:
+      - "18080:80"
+      - "18443:443"
+      - "18443:443/udp"
