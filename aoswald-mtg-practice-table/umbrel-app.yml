@@ -1,19 +1,24 @@
 manifestVersion: 1
 id: aoswald-mtg-practice-table
 name: MTG Practice Table
-tagline: Practice Commander and run a shared MTG life table
-icon: https://raw.githubusercontent.com/a0swald/mtg-practice-table/main/public/icon.png
+tagline: Practice Commander and run live shared MTG tables
+icon: https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/icon.svg
 category: Games
 version: "0.3.5"
 port: 3100
 description: >-
-  A self-hosted Magic: The Gathering practice and table utility app. Practice Commander games, use a mobile-first life counter, and create live Shared Tables that synchronize player life and state across devices in real time.
+  MTG Practice Table is a self-hosted Magic: The Gathering companion built for Commander players. Practice turns with physical cards, use the online practice table to search cards and manage your board, or run a mobile-first life counter during real games. Shared Tables let friends join from their own phones and keep life totals synchronized in real time. Optional DuckDNS remote access and PIN protection make it easy to host the app from your Umbrel and use it on game night without requiring guests to sign in to Umbrel.
 developer: Alex Oswald
 website: https://mtgtable.duckdns.org
 submitter: Alex Oswald
 submission: https://github.com/a0swald/umbrel-community-app-store
 repo: https://github.com/a0swald/mtg-practice-table
 support: https://github.com/a0swald/mtg-practice-table/issues
+gallery:
+  - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-1.svg
+  - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-2.svg
+  - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-3.svg
+  - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-4.svg
 releaseNotes: >-
   Restores the live Shared Table opponent life HUD beside the table menu after client-side navigation, fixes swipe-to-open and swipe-to-close player settings from the drawer handle on mobile in Auto and manual orientations, and improves Remote Access Public, HTTPS, and Socket.IO status detection when using a public reverse proxy on networks without NAT loopback.
 dependencies: []
