@@ -4,7 +4,7 @@ name: MTG Practice Table
 tagline: Practice Commander and run live shared MTG tables
 icon: https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/icon.svg
 category: Games
-version: "0.3.8"
+version: "0.3.9"
 port: 3100
 description: >-
   MTG Practice Table is a self-hosted Magic: The Gathering companion built for Commander players. Practice turns with physical cards, use the online practice table to search cards and manage your board, or run a mobile-first life counter during real games. Shared Tables let friends join from their own phones and keep life totals synchronized in real time. Optional DuckDNS remote access and PIN protection make it easy to host the app from your Umbrel and use it on game night without requiring guests to sign in to Umbrel.
@@ -20,7 +20,7 @@ gallery:
   - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-3.svg
   - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-4.svg
 releaseNotes: >-
-  Locks DuckDNS domain and token administration to the Umbrel/local network while keeping public connection health visible, and automatically compacts player swipe-up settings on crowded 5–6 player local tables so controls remain usable on smaller player cards.
+  Adds proper top safe-area padding for installed iPhone/iPad Home Screen mode so content clears the system status bar, and completely hides Remote Access settings unless the app is opened directly from umbrel.local. DuckDNS administration remains server-side restricted to the local Umbrel host.
 dependencies: []
 path: ""
 defaultUsername: ""
