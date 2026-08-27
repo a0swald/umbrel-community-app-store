@@ -4,7 +4,7 @@ name: MTG Practice Table
 tagline: Practice Commander and run live shared MTG tables
 icon: https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/icon.svg
 category: Games
-version: "0.3.10"
+version: "0.3.11"
 port: 3100
 description: >-
   MTG Practice Table is a self-hosted Magic: The Gathering companion built for Commander players. Practice turns with physical cards, use the online practice table to search cards and manage your board, or run a mobile-first life counter during real games. Shared Tables let friends join from their own phones and keep life totals synchronized in real time. Optional DuckDNS remote access and PIN protection make it easy to host the app from your Umbrel and use it on game night without requiring guests to sign in to Umbrel.
@@ -20,7 +20,7 @@ gallery:
   - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-3.svg
   - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-4.svg
 releaseNotes: >-
-  Makes the player Settings carousel swipeable from anywhere in the menu, including directly over action icons, counters, and buttons. Normal taps still activate controls, while horizontal drag gestures move between Player, Counters, Commander Damage, and Shared Table panels.
+  Fixes the player Settings carousel so horizontal swipes work immediately from anywhere on the first Player panel, including over Kill Player, Name, Background, and counter controls, without requiring an edge swipe first. Also prevents the iOS keyboard from opening automatically when the Name settings panel is opened; the keyboard now appears only after tapping the name input.
 dependencies: []
 path: ""
 defaultUsername: ""
