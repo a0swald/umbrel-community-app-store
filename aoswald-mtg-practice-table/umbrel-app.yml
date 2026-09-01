@@ -4,7 +4,7 @@ name: MTG Practice Table
 tagline: Practice Commander and run live shared MTG tables
 icon: https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/icon.svg
 category: Games
-version: "0.4.2"
+version: "0.4.3"
 port: 3100
 description: >-
   MTG Practice Table is a self-hosted Magic: The Gathering companion built for Commander players. Practice turns with physical cards, use the online practice table to search cards and manage your board, or run a mobile-first life counter during real games. Shared Tables let friends join from their own phones and keep life totals synchronized in real time. Optional DuckDNS remote access and PIN protection make it easy to host the app from your Umbrel and use it on game night without requiring guests to sign in to Umbrel.
@@ -20,7 +20,7 @@ gallery:
   - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-3.svg
   - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-4.svg
 releaseNotes: >-
-  Fixes Safari's blurred Game Log rendering and prevents Smart Opponent games from stalling without mana. New opponent games now start with a playable opening hand containing three lands, and existing stalled games can recover by finding a basic land if the opponent has reached its third turn without a mana source.
+  Fixes the desktop Practice Table right rail blur. The Pass Turn container was inheriting its mobile bottom positioning while also being pinned from the top, causing it to stretch over the entire Game Log with a backdrop blur. The desktop control now sizes only to the button and no longer blurs the log beneath it.
 dependencies: []
 path: ""
 defaultUsername: ""
