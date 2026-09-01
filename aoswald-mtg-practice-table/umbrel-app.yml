@@ -4,7 +4,7 @@ name: MTG Practice Table
 tagline: Practice Commander and run live shared MTG tables
 icon: https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/icon.svg
 category: Games
-version: "0.4.3"
+version: "0.4.4"
 port: 3100
 description: >-
   MTG Practice Table is a self-hosted Magic: The Gathering companion built for Commander players. Practice turns with physical cards, use the online practice table to search cards and manage your board, or run a mobile-first life counter during real games. Shared Tables let friends join from their own phones and keep life totals synchronized in real time. Optional DuckDNS remote access and PIN protection make it easy to host the app from your Umbrel and use it on game night without requiring guests to sign in to Umbrel.
@@ -20,7 +20,7 @@ gallery:
   - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-3.svg
   - https://raw.githubusercontent.com/a0swald/umbrel-community-app-store/master/aoswald-mtg-practice-table/assets/gallery-4.svg
 releaseNotes: >-
-  Fixes the desktop Practice Table right rail blur. The Pass Turn container was inheriting its mobile bottom positioning while also being pinned from the top, causing it to stretch over the entire Game Log with a backdrop blur. The desktop control now sizes only to the button and no longer blurs the log beneath it.
+  Refines the Practice Table layout by separating Pass Turn from the turn-status card so the controls no longer overlap. Battlefield permanents now use compact art-forward card previews that crop away the rules-text area while keeping the card name, artwork, power/toughness, counters, and combat status easy to see. Commander cards remain full-card views.
 dependencies: []
 path: ""
 defaultUsername: ""
